@@ -35,7 +35,7 @@ def load_list_files_as_array(file_list, file_shape, start_index = 30, end_index 
     return result
 
 
-def temporal_dataset(data, n_frame = 20, video_length=170):
+def timeshift_dataset(data, n_frame = 20, video_length=170):
     '''
     Given, an Image from a video at time t: "Xt" and the number of timesteps we want to predict: "n_frame" 
     this function produces (x,y,dt) where:
