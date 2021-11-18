@@ -47,8 +47,8 @@ x_train = np.expand_dims(x_train, -1)
 x_val = np.expand_dims(x_val, -1)
 
 video_length = abs(start_frame - end_frame)
-x_train,y_train,dt_train = temporal_dataset(x_train, n_frame=20, video_length= video_length)
-x_val,y_val,dt_val = temporal_dataset(x_val, n_frame=20, video_length= video_length)
+x_train,y_train,dt_train = timeshift_dataset(x_train, n_frame=20, video_length= video_length)
+x_val,y_val,dt_val = timeshift_dataset(x_val, n_frame=20, video_length= video_length)
 
 
 
