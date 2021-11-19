@@ -28,17 +28,17 @@ file_list_val = [file for file in file_list if "rec600" in file ]
 
 start_frame = 30
 end_frame = 200
-original_file_shape = [360, 112, 112]
+file_shape = [360, 112, 112]
 
 x_train = load_list_files_as_array(
     file_list_training, 
-    original_file_shape,
+    file_shape,
     start_index = start_frame, 
     end_index = end_frame
 )
 x_val = load_list_files_as_array(
     file_list_val, 
-    original_file_shape, 
+    file_shape, 
     start_index = start_frame, 
     end_index = end_frame
 )
