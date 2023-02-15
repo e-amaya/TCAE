@@ -15,16 +15,16 @@ def affine_transformation_gradient_descent(
 ):
     '''
     Let S_θ be the affine transformation specified by the transformation matrix: 
-    θ = [ [ʎ, 0, tx],
-          [0, ʎ, ty] ]
+    θ = [ [ʎ, 0, t_x],
+          [0, ʎ, t_y] ]
           
     This function uses gradient descent to solve the following optimization problem:
-    min_{ʎ,tx,ty}[MSE(S_θ(x),y)]
+    min_{ʎ,t_x,t_y}[MSE(S_θ(x),y)]
     
     Args:
     x (tf.Tensor): input tensor to be transformed with shape=(n, height, width, channels)
     y (tf.Tensor): target tensor with shape=(n, height, width, channels)
-    id_ (str): name of experiment
+    id_ (str, int): id of experiment
     opt_name (str): optimizer to be used
     lr (float): learning rate for optimizer
     max_steps (int): maximum number of steps for gradient descent.
